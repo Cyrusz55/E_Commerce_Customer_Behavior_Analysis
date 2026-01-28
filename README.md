@@ -1,86 +1,230 @@
- E-commerce Behavior Analysis
+🛒 E-commerce Behavior Analysis (Olist Dataset)
 
-Summary
--------
-This repository contains an end-to-end exploratory analysis and segmentation workflow for the Olist e-commerce dataset. The primary analysis is implemented in `book1.ipynb` and covers data cleaning, geolocation visualizations, RFM & CLV segmentation, product ABC analysis, time-series GMV forecasting, and seller evaluation.
 
-Quick start
------------
-1. Clone the repository.
-2. Place required CSVs in the project root (or `data/`) and add a valid Mapbox token to `mapbox_token.txt`.
-3. Create a virtual environment and install 
-python -m venv .venv .venv\Scripts\activate pip install -r requirements.txt
-4. Open `book1.ipynb` in Jupyter or PyCharm and run cells sequentially.
+An end-to-end data analytics & customer intelligence project built on the Brazilian Olist e-commerce dataset, covering exploratory analysis, customer segmentation, forecasting, and seller evaluation.
 
-Required data files
--------------------
-Place these CSV files in the project root or `data/`:
-- `olist_geolocation_dataset.csv`
-- `olist_order_items_dataset.csv`
-- `olist_order_payments_dataset.csv`
-- `olist_order_reviews_dataset.csv`
-- `olist_orders_dataset.csv`
-- `olist_products_dataset.csv`
-- `olist_sellers_dataset.csv`
-- `product_category_name_translation.csv`
-- `olist_customers_dataset.csv`
 
-Mapbox token
-------------
-- Add a Mapbox access token in `mapbox_token.txt` (single line). Keep this file out of version control (add to `.gitignore`) if the token is private.
+📊 Focus: turning raw transactional data into business-driven insights
 
-Environment & dependencies
---------------------------
-- Python 3.8+ (Windows)
-- Core packages used: `pandas`, `numpy`, `plotly`, `matplotlib`, `seaborn`, `folium`, `geopy`, `scikit-learn`, `shap`
-- Install with `pip install -r requirements.txt`
 
-How to run
-----------
-- Open `book1.ipynb` in Jupyter Notebook / JupyterLab or run in PyCharm Notebook mode.
-- Execute cells in order. Interactive Plotly charts render in a notebook; if working offline, export static images via Plotly / Matplotlib and save them to `docs/images/`.
 
-Saved images & embedded previews
---------------------------------
-Place generated images in `docs/images/`. Example image names used in the notebook and README:
+---
 
-- `docs/images/top10_locations.png` — Top 10 selling locations
-- `docs/images/customer_map.png` — Customer scattermap
-- `docs/images/state_choropleth.png` — Spending by state (choropleth)
-- `docs/images/new_returning_monthly.png` — New vs returning customers (monthly)
-- `docs/images/clv_segmentation.png` — CLV segmentation
-- `docs/images/rfm_segmentation.png` — RFM segmentation
-- `docs/images/top_product_categories.png` — Product categories (bar + GMV)
-- `docs/images/abc_pareto.png` — Product ABC pareto
-- `docs/images/volatility_plot.png` — Product volatility
-- `docs/images/daily_gmv.png` / `docs/images/monthly_gmv.png` — Time-series GMV
-- `docs/images/actual_vs_predicted.png` — Forecast comparison
-- `docs/images/review_histogram.png` — Review score distribution
-- `docs/images/seller_suggestion.png` — Seller recommendation snapshot
+🔍 Project Highlights
 
-Embedded previews (rendered by viewers that support images):
-![Top 10 selling locations](/docs/images/top10_locations.png)
-![Customer map](/docs/images/customer_map.png)
-![Spending by state](/docs/images/state_choropleth.png)
 
-Project layout
---------------
-- `book1.ipynb` — Main analysis notebook
-- `requirements.txt` — Python dependencies
-- `docs/images/` — Saved images referenced by the notebook / README
-- CSV data files — project root or `data/`
-- `mapbox_token.txt` — Mapbox access token
+✅ End-to-end data pipeline (raw CSV → insights)
 
-Notes & tips
------------
-- Keep `mapbox_token.txt` private or add to `.gitignore`.
-- If interactive renderers fail, save static figures to `docs/images/` and view them from the README.
-- Update image filenames in README if your saved images use different names.
+✅ Customer segmentation using RFM & CLV
 
-Author
-------
-Created by Cyrus
+✅ Geospatial analysis with Mapbox & Plotly
 
-License
--------
-MIT
+✅ Product performance via ABC / Pareto analysis
+
+✅ GMV time-series forecasting
+
+✅ Seller performance evaluation & recommendations
+
+
+---
+
+📂 Project Structure
+
+	.
+	├── book1.ipynb                # Main analysis notebook
+	├── requirements.txt           # Python dependencies
+	├── mapbox_token.txt           # Mapbox access token (gitignored)
+	├── data/                       # Raw CSV datasets (optional)
+	├── docs/
+	│   └── images/                # Generated plots & figures
+	└── README.md
+
+
+---
+
+📊 Key Visualizations (Previews)
+<p align="center">
+  <img src="docs/images/top_15_Selling_products%20categories.png" width="45%">
+  <img src="docs/images/top_10%20selling_loc.png" width="45%">
+</p><p align="center">
+  <img src="docs/images/monthly%20gmv.png" width="60%">
+</p>
+---
+
+🧠 Analyses Performed
+
+Customer Analytics
+
+- RFM segmentation (Recency, Frequency, Monetary)
+
+- CLV estimation & customer value tiers
+
+- New vs. returning customer trends
+
+Product Analytics
+
+- Top categories by GMV
+
+- ABC / Pareto classification
+
+- Demand volatility analysis
+
+Sales & Forecasting
+
+- Daily & monthly GMV time series
+
+- Forecast vs. actual comparison
+
+- Trend & seasonality insights
+
+Seller Evaluation
+
+- Review score distribution
+
+- Performance benchmarking
+
+- Seller recommendation logic
+
+
+---
+
+🚀 Quick Start
+
+1️⃣ Clone the Repository
+
+	git clone https://github.com/your-username/ecommerce-behavior-analysis.git
+	cd ecommerce-behavior-analysis
+
+2️⃣ Add Required Data
+
+
+Place the following CSV files in the project root or data/ directory:
+
+
+- olist_orders_dataset.csv
+
+- olist_order_items_dataset.csv
+
+- olist_order_payments_dataset.csv
+
+- olist_order_reviews_dataset.csv
+
+- olist_customers_dataset.csv
+
+- olist_products_dataset.csv
+
+- olist_sellers_dataset.csv
+
+- olist_geolocation_dataset.csv
+
+- product_category_name_translation.csv
+
+3️⃣ Environment Setup
+
+	python -m venv .venv
+	.venv\Scripts\activate
+	pip install -r requirements.txt
+
+4️⃣ Mapbox Configuration
+
+
+Create a file called mapbox_token.txt and paste your Mapbox token (single line).
+
+
+⚠️ Keep this file private and add it to .gitignore
+
+
+5️⃣ Run the Notebook
+
+
+Open book1.ipynb in:
+
+
+- Jupyter Notebook / JupyterLab
+
+
+- PyCharm (Notebook mode)
+
+Run cells sequentially.
+
+
+---
+
+🖼️ Generated Outputs
+
+
+All figures are saved to docs/images/ and referenced in the notebook and README.
+
+Examples:
+
+
+- rfm_segmentation.png
+
+- clv_segmentation.png
+
+- abc_pareto.png
+
+- daily_gmv.png
+
+- actual_vs_predicted.png
+
+- seller_suggestion.png
+
+
+---
+
+🛠️ Tech Stack
+
+- Language: Python 3.8+
+
+- Data: Pandas, NumPy
+
+- Visualization: Plotly, Matplotlib, Seaborn, Folium
+
+- Geo: Mapbox, Geopy
+
+- ML / Analytics: Scikit-learn, SHAP
+
+
+---
+
+📌 Notes
+
+- Interactive Plotly charts work best inside notebooks.
+
+- For static viewing (GitHub), export figures to docs/images/.
+
+- Update README image paths if filenames change.
+
+
+---
+
+👤 Author
+
+
+Cyrus
+
+Engineer | Data Analyst | Math & ML Enthusiast
+
+
+---
+
+📄 License
+
+
+MIT License
+
+
+---
+
+✅ Optional Enhancements (Tell me if you want these)
+
+- Add Business Insights & Recommendations section
+
+
+- Add Model assumptions & limitations
+
+
+- Convert notebook → portfolio-ready HTML report
+
+- Add badges (Python, License, Notebook, Dataset)
