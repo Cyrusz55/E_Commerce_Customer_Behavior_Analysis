@@ -217,14 +217,3 @@ MIT License
 
 ---
 
-✅ Optional Enhancements (Tell me if you want these)
-
-- Add Business Insights & Recommendations section
-
-
-- Add Model assumptions & limitations
-
-
-- Convert notebook → portfolio-ready HTML report
-
-- Add badges (Python, License, Notebook, Dataset)
